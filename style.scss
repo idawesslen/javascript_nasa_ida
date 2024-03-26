@@ -1,0 +1,133 @@
+$lightest-pink: rgb(243, 239, 247);
+$medium-pink: #a59fc6;
+$darkest-purple: #242348;
+
+*,html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $lightest-pink;
+    font-family: 'lexend deca';
+}
+
+.dark-mode {
+    background-color: $darkest-purple;
+    color: $lightest-pink;
+}
+.light-mode {
+    background-color: $lightest-pink;
+    color: $darkest-purple;
+}
+
+h1{
+    font-size: 3rem;
+    // color: $darkest-purple;
+}
+h2{
+    font-size: 2.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+h3{
+    font-size: 1.5rem;
+    // color: $darkest-purple;
+}
+p{
+    font-size: 1rem;
+    // color: $darkest-purple;
+}
+.main-header{
+    background-color: $medium-pink;
+    padding: 1rem;
+    width: 100%;
+    .top-nav{
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }    
+    .switchBtn{   
+        display: flex;
+        align-items: center;
+        p{
+            padding-right: 1rem;
+        }  
+        #modeSwitch{ // styla rutan
+            width: 30px;
+            height: 30px;
+        }
+    }  
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    .form{ // hela formet
+        max-width: 500px;
+        padding: 2rem;          
+        border-radius: 20px;
+        background-color: $medium-pink ;
+        margin: auto;    
+        input,button { // styla båda samtidigt, de gemensamma 
+            display: block;
+            width: 100%; // ta upp så mycket söm möjligt
+            padding: 1rem;
+            border-radius: 10px;
+            border: none;
+            font-size: 1rem;
+            font-family: 'lexend deca';
+        }
+        input {
+            margin-bottom: 1rem;
+            border: none ; // inte ska hoppa
+            outline: none; // ta bort standard 
+            &::placeholder { // i inputfältet 
+                font-family: 'lexend deca';
+                color: $darkest-purple;
+            }
+        }
+        button {
+            background-color: $darkest-purple;
+            color: $lightest-pink;  
+            &:disabled{ // när knappen är disable så..
+                background-color: $lightest-pink;
+                color: $darkest-purple;
+            }
+        }
+        label {
+            display: block; // tar upp hela breden
+            color: $darkest-purple;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }  
+    }
+    .imgContainer {
+        padding-top: 20px;
+        @media (min-width:650px){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;    
+            margin: auto;
+        }
+        .card {
+            margin-bottom: 20px;
+            box-sizing: border-box; // kantens tjocklek inte ökar kortens storlek 
+            @media (min-width:650px){
+                width: calc(50% - 10px); // ta upp halva minus space
+            }
+            @media (min-width:1000px){
+                width: calc(33.33% - 10px); //ta upp 1 / 3 minus space
+            }
+            img {
+                width: 100%; // Sätt bildens bredd till 100% av dess förälderelement 
+                height: 400px; // bestämd höjd
+                object-fit: cover; // anpassa 
+            }
+        }
+    }
+}
+

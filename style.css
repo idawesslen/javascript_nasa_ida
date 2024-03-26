@@ -1,0 +1,141 @@
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(243, 239, 247);
+  font-family: "lexend deca";
+}
+
+.dark-mode {
+  background-color: #242348;
+  color: rgb(243, 239, 247);
+}
+
+.light-mode {
+  background-color: rgb(243, 239, 247);
+  color: #242348;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.main-header {
+  background-color: #a59fc6;
+  padding: 1rem;
+  width: 100%;
+}
+.main-header .top-nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.main-header .switchBtn {
+  display: flex;
+  align-items: center;
+}
+.main-header .switchBtn p {
+  padding-right: 1rem;
+}
+.main-header .switchBtn #modeSwitch {
+  width: 30px;
+  height: 30px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+.container .form {
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 20px;
+  background-color: #a59fc6;
+  margin: auto;
+}
+.container .form input, .container .form button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  font-family: "lexend deca";
+}
+.container .form input {
+  margin-bottom: 1rem;
+  border: none;
+  outline: none;
+}
+.container .form input::-moz-placeholder {
+  font-family: "lexend deca";
+  color: #242348;
+}
+.container .form input::placeholder {
+  font-family: "lexend deca";
+  color: #242348;
+}
+.container .form button {
+  background-color: #242348;
+  color: rgb(243, 239, 247);
+}
+.container .form button:disabled {
+  background-color: rgb(243, 239, 247);
+  color: #242348;
+}
+.container .form label {
+  display: block;
+  color: #242348;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.container .imgContainer {
+  padding-top: 20px;
+}
+@media (min-width: 650px) {
+  .container .imgContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+  }
+}
+.container .imgContainer .card {
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+@media (min-width: 650px) {
+  .container .imgContainer .card {
+    width: calc(50% - 10px);
+  }
+}
+@media (min-width: 1000px) {
+  .container .imgContainer .card {
+    width: calc(33.33% - 10px);
+  }
+}
+.container .imgContainer .card img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */
